@@ -1,0 +1,20 @@
+{
+  "name": "libretro-metadatas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:output": "node ./compiler/generate-output.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gr3gorywolf/libretro-metadatas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gr3gorywolf/libretro-metadatas/issues"
+  },
+  "homepage": "https://github.com/Gr3gorywolf/libretro-metadatas#readme"
+}

@@ -1,0 +1,578 @@
+﻿{
+  "Amstrad - CPC": {
+    "platformUniqueId": "cpc",
+    "platformName": "Amstrad CPC"
+  },
+  "Amstrad - GX4000": {
+    "platformUniqueId": "gx4000",
+    "platformName": "Amstrad GX4000"
+  },
+  "Apple - II": {
+    "platformUniqueId": "appleii",
+    "platformName": "Apple II"
+  },
+  "Arduboy Inc - Arduboy": {
+    "platformUniqueId": "arduboy",
+    "platformName": "Arduboy"
+  },
+  "Atari - 2600": {
+    "platformUniqueId": "atari2600",
+    "platformName": "Atari 2600"
+  },
+  "Atari - 5200": {
+    "platformUniqueId": "atari5200",
+    "platformName": "Atari 5200"
+  },
+  "Atari - 7800": {
+    "platformUniqueId": "atari7800",
+    "platformName": "Atari 7800"
+  },
+  "Atari - 8-bit Family": {
+    "platformUniqueId": "atari8bit",
+    "platformName": "Atari 8-bit Family"
+  },
+  "Atari - Jaguar": {
+    "platformUniqueId": "jaguar",
+    "platformName": "Atari Jaguar"
+  },
+  "Atari - Jaguar CD": {
+    "platformUniqueId": "jaguarcd",
+    "platformName": "Atari Jaguar CD"
+  },
+  "Atari - Lynx": {
+    "platformUniqueId": "lynx",
+    "platformName": "Atari Lynx"
+  },
+  "Atari - ST": {
+    "platformUniqueId": "atarist",
+    "platformName": "Atari ST"
+  },
+  "Bandai - WonderSwan": {
+    "platformUniqueId": "ws",
+    "platformName": "WonderSwan"
+  },
+  "Bandai - WonderSwan Color": {
+    "platformUniqueId": "wsc",
+    "platformName": "WonderSwan Color"
+  },
+  "Benesse - Pocket Challenge V2": {
+    "platformUniqueId": "pocketchallengev2",
+    "platformName": "Pocket Challenge V2"
+  },
+  "Casio - Loopy": {
+    "platformUniqueId": "loopy",
+    "platformName": "Casio Loopy"
+  },
+  "Casio - PV-1000": {
+    "platformUniqueId": "pv1000",
+    "platformName": "Casio PV-1000"
+  },
+  "Coleco - ColecoVision": {
+    "platformUniqueId": "coleco",
+    "platformName": "ColecoVision"
+  },
+  "Commodore - 64": {
+    "platformUniqueId": "c64",
+    "platformName": "Commodore 64"
+  },
+  "Commodore - Amiga": {
+    "platformUniqueId": "amiga",
+    "platformName": "Commodore Amiga"
+  },
+  "Commodore - CD32": {
+    "platformUniqueId": "cd32",
+    "platformName": "Commodore CD32"
+  },
+  "Commodore - CDTV": {
+    "platformUniqueId": "cdtv",
+    "platformName": "Commodore CDTV"
+  },
+  "Commodore - PET": {
+    "platformUniqueId": "pet",
+    "platformName": "Commodore - PET"
+  },
+  "Commodore - Plus-4": {
+    "platformUniqueId": "plus4",
+    "platformName": "Commodore - PLUS/4"
+  },
+  "Commodore - VIC-20": {
+    "platformUniqueId": "vic20",
+    "platformName": "VIC-20"
+  },
+  "Emerson - Arcadia 2001": {
+    "platformUniqueId": "arcadia",
+    "platformName": "Arcadia 2001"
+  },
+  "Entex - Adventure Vision": {
+    "platformUniqueId": "adventurevision",
+    "platformName": "Entex Adventure Vision"
+  },
+  "Epoch - Cassette Vision": {
+    "platformUniqueId": "cassette",
+    "platformName": "Cassette Vision"
+  },
+  "Epoch - Super Cassette Vision": {
+    "platformUniqueId": "supercassette",
+    "platformName": "Super Cassette Vision"
+  },
+  "Fairchild - Channel F": {
+    "platformUniqueId": "channelf",
+    "platformName": "Fairchild Channel F"
+  },
+  "FBNeo - Arcade Games": {
+    "platformUniqueId": "fbneo",
+    "platformName": "Arcade (FinalBurn Neo)"
+  },
+  "FinalBurn Neo (ClrMame Pro XML, Arcade only)": {
+    "platformUniqueId": "fbneo",
+    "platformName": "Arcade (FinalBurn Neo)"
+  },
+  "Funtech - Super Acan": {
+    "platformUniqueId": "superacan",
+    "platformName": "Funtech Super Acan"
+  },
+  "GamePark - GP32": {
+    "platformUniqueId": "gp32",
+    "platformName": "GamePark GP32"
+  },
+  "GCE - Vectrex": {
+    "platformUniqueId": "vectrex",
+    "platformName": "Vectrex"
+  },
+  "Hartung - Game Master": {
+    "platformUniqueId": "gamemaster",
+    "platformName": "Hartung Game Master"
+  },
+  "Infocom - Z-Machine": {
+    "platformUniqueId": "zmachine",
+    "platformName": "Infocom Z-Machine"
+  },
+  "Interton - VC 4000": {
+    "platformUniqueId": "vc4000",
+    "platformName": "Interton VC 4000"
+  },
+  "Konami - Picno": {
+    "platformUniqueId": "picno",
+    "platformName": "Konami Picno"
+  },
+  "LeapFrog - LeapPad": {
+    "platformUniqueId": "leappad",
+    "platformName": "LeapFrog LeapPad"
+  },
+  "LeapFrog - Leapster Learning Game System": {
+    "platformUniqueId": "leapster",
+    "platformName": "LeapFrog Leapster Learning Game System"
+  },
+  "Magnavox - Odyssey 2": {
+    "platformUniqueId": "odyssey2",
+    "platformName": "Magnavox Odyssey 2"
+  },
+  "Magnavox - Odyssey2": {
+    "platformUniqueId": "odyssey2",
+    "platformName": "Magnavox Odyssey 2"
+  },
+  "MAME": {
+    "platformUniqueId": "mame",
+    "platformName": "Arcade (MAME)"
+  },
+  "MAME 2000": {
+    "platformUniqueId": "mame",
+    "platformName": "Arcade (MAME)"
+  },
+  "MAME 2000 BIOS": {
+    "platformUniqueId": "mame",
+    "platformName": "Arcade (MAME)"
+  },
+  "MAME 2000 XML": {
+    "platformUniqueId": "mame",
+    "platformName": "Arcade (MAME)"
+  },
+  "MAME 2003": {
+    "platformUniqueId": "mame",
+    "platformName": "Arcade (MAME)"
+  },
+  "MAME 2003 XML": {
+    "platformUniqueId": "mame",
+    "platformName": "Arcade (MAME)"
+  },
+  "MAME 2003-Plus": {
+    "platformUniqueId": "mame",
+    "platformName": "Arcade (MAME)"
+  },
+  "MAME 2003-Plus XML": {
+    "platformUniqueId": "mame",
+    "platformName": "Arcade (MAME)"
+  },
+  "MAME 2010": {
+    "platformUniqueId": "mame",
+    "platformName": "Arcade (MAME)"
+  },
+  "MAME 2010 XML": {
+    "platformUniqueId": "mame",
+    "platformName": "Arcade (MAME)"
+  },
+  "MAME 2015": {
+    "platformUniqueId": "mame",
+    "platformName": "Arcade (MAME)"
+  },
+  "MAME 2015 XML": {
+    "platformUniqueId": "mame",
+    "platformName": "Arcade (MAME)"
+  },
+  "MAME 2016": {
+    "platformUniqueId": "mame",
+    "platformName": "Arcade (MAME)"
+  },
+  "MAME 2016 XML (Arcade Only)": {
+    "platformUniqueId": "mame",
+    "platformName": "Arcade (MAME)"
+  },
+  "MAME BIOS": {
+    "platformUniqueId": "mame",
+    "platformName": "Arcade (MAME)"
+  },
+  "Mattel - Intellivision": {
+    "platformUniqueId": "intellivision",
+    "platformName": "Intellivision"
+  },
+  "Microsoft - MSX": {
+    "platformUniqueId": "msx",
+    "platformName": "MSX"
+  },
+  "Microsoft - MSX 2": {
+    "platformUniqueId": "msx",
+    "platformName": "MSX"
+  },
+  "Microsoft - MSX2": {
+    "platformUniqueId": "msx",
+    "platformName": "MSX"
+  },
+  "Microsoft - Xbox": {
+    "platformUniqueId": "xbox",
+    "platformName": "Microsoft - Xbox"
+  },
+  "Microsoft - Xbox 360": {
+    "platformUniqueId": "xbox360",
+    "platformName": "Microsoft - XBox 360"
+  },
+  "Microsoft - Xbox 360 (Digital)": {
+    "platformUniqueId": "xbox360",
+    "platformName": "Microsoft - XBox 360"
+  },
+  "Microsoft - XBOX 360 (Games on Demand)": {
+    "platformUniqueId": "xbox360",
+    "platformName": "Microsoft - XBox 360"
+  },
+  "Microsoft - XBOX 360 (Title Updates)": {
+    "platformUniqueId": "xbox360",
+    "platformName": "Microsoft - XBox 360"
+  },
+  "Mobile - J2ME": {
+    "platformUniqueId": "j2me",
+    "platformName": "Java Me"
+  },
+  "Mobile - Palm OS": {
+    "platformUniqueId": "palm",
+    "platformName": "Palm OS"
+  },
+  "Mobile - Symbian": {
+    "platformUniqueId": "symbian",
+    "platformName": "Symbian"
+  },
+  "Mobile - Zeebo": {
+    "platformUniqueId": "zeebo",
+    "platformName": "Zeebo"
+  },
+  "NEC - PC Engine - TurboGrafx 16": {
+    "platformUniqueId": "tg16",
+    "platformName": "TurboGrafx-16"
+  },
+  "NEC - PC Engine CD - TurboGrafx-CD": {
+    "platformUniqueId": "tgcd",
+    "platformName": "TurboGrafx-CD"
+  },
+  "NEC - PC Engine SuperGrafx": {
+    "platformUniqueId": "supergrafx",
+    "platformName": "SuperGrafx"
+  },
+  "NEC - PC-8001 - PC-8801": {
+    "platformUniqueId": "pc88",
+    "platformName": "NEC PC-88"
+  },
+  "NEC - PC-98": {
+    "platformUniqueId": "pc98",
+    "platformName": "NEC PC-98"
+  },
+  "NEC - PC-FX": {
+    "platformUniqueId": "pcfx",
+    "platformName": "NEC PC-FX"
+  },
+  "Nintendo - e-Reader": {
+    "platformUniqueId": "ereader",
+    "platformName": "Nintendo e-Reader"
+  },
+  "Nintendo - Family Computer Disk System": {
+    "platformUniqueId": "fds",
+    "platformName": "Famicom Disk System"
+  },
+  "Nintendo - Game Boy": {
+    "platformUniqueId": "gb",
+    "platformName": "Nintendo - Game Boy"
+  },
+  "Nintendo - Game Boy Advance": {
+    "platformUniqueId": "gba",
+    "platformName": "Nintendo - Game Boy Advance"
+  },
+  "Nintendo - Game Boy Color": {
+    "platformUniqueId": "gbc",
+    "platformName": "Nintendo - Game Boy Color"
+  },
+  "Nintendo - GameCube": {
+    "platformUniqueId": "gc",
+    "platformName": "Nintendo - GameCube"
+  },
+  "Nintendo - New Nintendo 3DS": {
+    "platformUniqueId": "3ds",
+    "platformName": "Nintendo 3DS"
+  },
+  "Nintendo - New Nintendo 3DS (Digital)": {
+    "platformUniqueId": "3ds",
+    "platformName": "Nintendo 3DS"
+  },
+  "Nintendo - Nintendo 3DS": {
+    "platformUniqueId": "3ds",
+    "platformName": "Nintendo 3DS"
+  },
+  "Nintendo - Nintendo 3DS (Digital)": {
+    "platformUniqueId": "3ds",
+    "platformName": "Nintendo 3DS"
+  },
+  "Nintendo - Nintendo 64": {
+    "platformUniqueId": "n64",
+    "platformName": "Nintendo 64"
+  },
+  "Nintendo - Nintendo 64 (BigEndian)": {
+    "platformUniqueId": "n64",
+    "platformName": "Nintendo 64"
+  },
+  "Nintendo - Nintendo 64 (ByteSwapped)": {
+    "platformUniqueId": "n64",
+    "platformName": "Nintendo 64"
+  },
+  "Nintendo - Nintendo 64DD": {
+    "platformUniqueId": "n64dd",
+    "platformName": "Nintendo 64DD"
+  },
+  "Nintendo - Nintendo DS": {
+    "platformUniqueId": "nds",
+    "platformName": "Nintendo DS"
+  },
+  "Nintendo - Nintendo DS (Download Play)": {
+    "platformUniqueId": "nds",
+    "platformName": "Nintendo DS"
+  },
+  "Nintendo - Nintendo DSi": {
+    "platformUniqueId": "ndsi",
+    "platformName": "Nintendo DSi"
+  },
+  "Nintendo - Nintendo Entertainment System": {
+    "platformUniqueId": "nes",
+    "platformName": "Nintendo Entertainment System"
+  },
+  "Nintendo - Pokemon Mini": {
+    "platformUniqueId": "pokemini",
+    "platformName": "Pokemon Mini"
+  },
+  "Nintendo - Satellaview": {
+    "platformUniqueId": "satellaview",
+    "platformName": "Nintendo Satellaview"
+  },
+  "Nintendo - Sufami Turbo": {
+    "platformUniqueId": "sufami",
+    "platformName": "Sufami Turbo"
+  },
+  "Nintendo - Super Nintendo Entertainment System": {
+    "platformUniqueId": "snes",
+    "platformName": "Super Nintendo Entertainment System"
+  },
+  "Nintendo - Virtual Boy": {
+    "platformUniqueId": "virtualboy",
+    "platformName": "Virtual Boy"
+  },
+  "Nintendo - Wii": {
+    "platformUniqueId": "wii",
+    "platformName": "Nintendo Wii"
+  },
+  "Nintendo - Wii (Digital)": {
+    "platformUniqueId": "wii",
+    "platformName": "Nintendo Wii"
+  },
+  "Nintendo - Wii U (Digital)": {
+    "platformUniqueId": "wiiu",
+    "platformName": "Nintendo Wii U"
+  },
+  "Philips - CD-i": {
+    "platformUniqueId": "cdi",
+    "platformName": "Philips CD-i"
+  },
+  "Philips - Videopac+": {
+    "platformUniqueId": "g7400",
+    "platformName": "Philips Videopac+ G7400"
+  },
+  "RCA - Studio II": {
+    "platformUniqueId": "studio2",
+    "platformName": "RCA Studio II"
+  },
+  "Sega - 32x": {
+    "platformUniqueId": "segacd32x",
+    "platformName": "Sega 32X"
+  },
+  "Sega - 32X": {
+    "platformUniqueId": "segacd32x",
+    "platformName": "Sega 32X"
+  },
+  "Sega - Beena": {
+    "platformUniqueId": "beena",
+    "platformName": "Sega Beena"
+  },
+  "Sega - Dreamcast": {
+    "platformUniqueId": "dreamcast",
+    "platformName": "Dreamcast"
+  },
+  "Sega - Game Gear": {
+    "platformUniqueId": "gamegear",
+    "platformName": "Sega Game Gear"
+  },
+  "Sega - Master System - Mark III": {
+    "platformUniqueId": "master",
+    "platformName": "Sega Master System"
+  },
+  "Sega - Mega Drive - Genesis": {
+    "platformUniqueId": "genesis",
+    "platformName": "Sega Genesis"
+  },
+  "Sega - Mega-CD - Sega CD": {
+    "platformUniqueId": "segacd",
+    "platformName": "Sega CD"
+  },
+  "Sega - Naomi": {
+    "platformUniqueId": "naomi",
+    "platformName": "Sega Naomi"
+  },
+  "Sega - Naomi 2": {
+    "platformUniqueId": "naomi",
+    "platformName": "Sega Naomi"
+  },
+  "Sega - PICO": {
+    "platformUniqueId": "pico",
+    "platformName": "Sega Pico"
+  },
+  "Sega - Saturn": {
+    "platformUniqueId": "saturn",
+    "platformName": "Sega Saturn"
+  },
+  "Sega - SG-1000": {
+    "platformUniqueId": "sg1000",
+    "platformName": "Sega SG-1000"
+  },
+  "Sharp - X1": {
+    "platformUniqueId": "x1",
+    "platformName": "Sharp X1"
+  },
+  "Sharp - X68000": {
+    "platformUniqueId": "x68000",
+    "platformName": "Sharp X68000"
+  },
+  "Sinclair - ZX Spectrum": {
+    "platformUniqueId": "zxspectrum",
+    "platformName": "ZX Spectrum"
+  },
+  "Sinclair - ZX Spectrum +3": {
+    "platformUniqueId": "zxspectrum",
+    "platformName": "ZX Spectrum"
+  },
+  "SNK - Neo Geo CD": {
+    "platformUniqueId": "neogeocd",
+    "platformName": "Neo Geo CD"
+  },
+  "SNK - Neo Geo Pocket": {
+    "platformUniqueId": "ngp",
+    "platformName": "NeoGeo Pocket"
+  },
+  "SNK - Neo Geo Pocket Color": {
+    "platformUniqueId": "ngpc",
+    "platformName": "NeoGeo Pocket Color"
+  },
+  "Sony - PlayStation": {
+    "platformUniqueId": "psx",
+    "platformName": "Sony PlayStation"
+  },
+  "Sony - PlayStation 2": {
+    "platformUniqueId": "ps2",
+    "platformName": "Sony PlayStation 2"
+  },
+  "Sony - PlayStation 3": {
+    "platformUniqueId": "ps3",
+    "platformName": "Sony PlayStation 3"
+  },
+  "Sony - PlayStation 3 (PSN)": {
+    "platformUniqueId": "ps3",
+    "platformName": "Sony PlayStation 3"
+  },
+  "Sony - PlayStation Portable": {
+    "platformUniqueId": "psp",
+    "platformName": "PlayStation Portable"
+  },
+  "Sony - PlayStation Portable (PSN)": {
+    "platformUniqueId": "psp",
+    "platformName": "PlayStation Portable"
+  },
+  "Sony - PlayStation Portable (PSX2PSP)": {
+    "platformUniqueId": "psp",
+    "platformName": "PlayStation Portable"
+  },
+  "Sony - PlayStation Portable (UMD Music)": {
+    "platformUniqueId": "psp",
+    "platformName": "PlayStation Portable"
+  },
+  "Sony - PlayStation Portable (UMD Video)": {
+    "platformUniqueId": "psp",
+    "platformName": "PlayStation Portable"
+  },
+  "Sony - PlayStation Vita": {
+    "platformUniqueId": "vita",
+    "platformName": "Sony PS Vita"
+  },
+  "Sony - PlayStation Vita (PSN)": {
+    "platformUniqueId": "vita",
+    "platformName": "Sony PS Vita"
+  },
+  "Spectravideo - SVI-318 - SVI-328": {
+    "platformUniqueId": "svi",
+    "platformName": "Spectravideo SVI-318 / SVI-328"
+  },
+  "The 3DO Company - 3DO": {
+    "platformUniqueId": "3do",
+    "platformName": "3DO"
+  },
+  "Thomson - MOTO": {
+    "platformUniqueId": "moto",
+    "platformName": "Thomson MOTO"
+  },
+  "Tiger - Game.com": {
+    "platformUniqueId": "gamecom",
+    "platformName": "Tiger Game.com"
+  },
+  "VTech - CreatiVision": {
+    "platformUniqueId": "creativision",
+    "platformName": "VTech CreatiVision"
+  },
+  "VTech - V.Smile": {
+    "platformUniqueId": "vsmile",
+    "platformName": "VTech V.Smile"
+  },
+  "Watara - Supervision": {
+    "platformUniqueId": "supervision",
+    "platformName": "Watara Supervision"
+  }
+}
