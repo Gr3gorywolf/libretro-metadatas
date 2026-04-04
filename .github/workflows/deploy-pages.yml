@@ -30,7 +30,7 @@ jobs:
         run: bun install
 
       - name: Compile dats
-        run: bun ./scripts/compiler/generate-output.js
+        run: bun ./compiler/generate-output.js
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
