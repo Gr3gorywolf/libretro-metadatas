@@ -46,6 +46,12 @@ jobs:
       - name: Compile all-execs
         run: bun ./compilers/compile-all-execs.js
 
+      - name: Build launchbox gamesdb submodule
+        run: cd ./libretro-roms-scraper && bun install && bun run index.js
+
+      - name: Compile launchbox gamesdb
+        run: bun ./compilers/compile-launchbox-gamesdb.js
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -7,3 +7,6 @@
 [submodule "cachyos-ananicy-db"]
 	path = cachyos-ananicy-db
 	url = https://github.com/CachyOS/ananicy-rules.git
+[submodule "libretro-roms-scraper"]
+	path = libretro-roms-scraper
+	url = https://github.com/Gr3gorywolf/libretro-roms-scraper.git
