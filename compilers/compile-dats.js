@@ -128,9 +128,13 @@ async function resetOutputDir(outputDir) {
   await fs.rm(outputDir, { recursive: true, force: true });
 }
 
+function removeInvalidPathChars(name) {
+  return name.replace(/[/\\?%*:|"<>]/g, "_");
+}
+
 async function writeRecordFiles(outputDir, sourceMap) {
   for (const [key, recordMap] of sourceMap.entries()) {
-    const outputPath = path.join(outputDir, `${key}.json`);
+    const outputPath = path.join(outputDir, `${removeInvalidPathChars(key)}.json`);
     const records = [...recordMap.values()].sort(compareRecords);
     const json = `${JSON.stringify(records, null, 2)}\n`;
     await fs.writeFile(outputPath, json, "utf8");
