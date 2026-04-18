@@ -1,3 +1,11 @@
 [submodule "libretro-database"]
 	path = libretro-database
 	url = https://github.com/libretro/libretro-database
+
+[submodule "discord-api"]
+	path = discord-api
+	url = https://github.com/RlxChap2/api.discord.com
+
+[submodule "cachyos-ananicy-db"]
+	path = cachyos-ananicy-db
+	url = https://github.com/CachyOS/ananicy-rules/tree/master

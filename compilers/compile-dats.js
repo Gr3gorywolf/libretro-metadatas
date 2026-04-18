@@ -6,6 +6,7 @@ const METADAT_DIR = path.join(ROOT_DIR, "libretro-database", "metadat");
 const INDEX_PATH = path.join(ROOT_DIR, "index.json");
 const OUTPUT_DIR = path.join(ROOT_DIR, "output");
 const CRC_DIR = path.join(OUTPUT_DIR, "crc");
+const SERIAL_DIR = path.join(OUTPUT_DIR, "serial");
 const SIZE_DIR = path.join(OUTPUT_DIR, "size");
 
 async function main() {
@@ -14,6 +15,7 @@ async function main() {
 
   const crcRecords = new Map();
   const sizeRecords = new Map();
+  const serialRecords = new Map();
   const unmappedFiles = new Set();
 
   for (const datFile of datFiles) {
@@ -44,6 +46,10 @@ async function main() {
         if (rom.size) {
           addRecord(sizeRecords, rom.size, record);
         }
+
+        if (rom.serial) {
+          addRecord(serialRecords, rom.serial.toLowerCase(), record);
+        }
       }
     }
   }
@@ -62,13 +68,15 @@ async function main() {
   await resetOutputDir(OUTPUT_DIR);
   await fs.mkdir(CRC_DIR, { recursive: true });
   await fs.mkdir(SIZE_DIR, { recursive: true });
-
+  await fs.mkdir(SERIAL_DIR, { recursive: true });
   await writeRecordFiles(CRC_DIR, crcRecords);
   await writeRecordFiles(SIZE_DIR, sizeRecords);
+  await writeRecordFiles(SERIAL_DIR, serialRecords);
 
   console.log(`Processed ${datFiles.length} .dat files`);
   console.log(`Generated ${crcRecords.size} files in output/crc`);
   console.log(`Generated ${sizeRecords.size} files in output/size`);
+  console.log(`Generated ${serialRecords.size} files in output/serial`);
 }
 
 async function loadConsoleIndex() {

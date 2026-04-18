@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Gr3gorywolf/libretro-metadatas/issues"
   },
-  "homepage": "https://github.com/Gr3gorywolf/libretro-metadatas#readme"
+  "homepage": "https://github.com/Gr3gorywolf/libretro-metadatas#readme",
+  "dependencies": {
+    "fast-xml-parser": "^5.7.1"
+  }
 }
