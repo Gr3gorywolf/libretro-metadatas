@@ -34,6 +34,18 @@ jobs:
       - name: Compile dats
         run: bun ./compilers/compile-dats.js
 
+      - name: Compile switch
+        run: bun ./compilers/compile-switch.js
+
+      - name: Compile discord-execs
+        run: bun ./compilers/compile-discord-execs.js
+
+      - name: Compile wine-execs
+        run: bun ./compilers/compile-wine-execs.js
+
+      - name: Compile all-execs
+        run: bun ./compilers/compile-all-execs.js
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
