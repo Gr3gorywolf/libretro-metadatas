@@ -3,6 +3,9 @@ name: Deploy Next.js to GitHub Pages
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 1,16 * *"
 
 permissions:
   contents: read

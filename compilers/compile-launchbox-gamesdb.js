@@ -13,9 +13,12 @@ const INPUT_DIR = path.resolve(
 const OUTPUT_DIR = path.resolve(__dirname, "../output/libretro-by-slug");
 const FULLSET_DIR = path.resolve(__dirname, "../output/libretro-gamesdb");
 const INDEX_PATH = path.resolve(__dirname, "../output/libretro-index.json");
+const FULL_DATABASE_PATH = path.resolve(__dirname, "../output/libretro-full-database.json");
 function ensureDir(dir) {
   fs.mkdirSync(dir, { recursive: true });
 }
+
+var fullDatabase = {};
 
 function slugify(str) {
   return str
@@ -65,10 +68,11 @@ function main() {
           console: consoleSlug,
         });
       }
+      fullDatabase[data.console.slug] = data.games ?? [];
     }
 
     fs.writeFileSync(INDEX_PATH, JSON.stringify(index));
-
+    fs.writeFileSync(FULL_DATABASE_PATH, JSON.stringify(fullDatabase));
     fs.renameSync(INPUT_DIR, FULLSET_DIR);
 
     console.log(`✅ Games processed: ${index.length}`);
