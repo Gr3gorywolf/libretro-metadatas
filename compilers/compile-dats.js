@@ -6,8 +6,12 @@ const METADAT_DIR = path.join(ROOT_DIR, "libretro-database", "metadat");
 const INDEX_PATH = path.join(ROOT_DIR, "index.json");
 const OUTPUT_DIR = path.join(ROOT_DIR, "output");
 const CRC_DIR = path.join(OUTPUT_DIR, "crc");
-const SERIAL_DIR = path.join(OUTPUT_DIR, "serial");
-const SIZE_DIR = path.join(OUTPUT_DIR, "size");
+const {
+  compareRecords,
+  ensureRecordDirs,
+  removeInvalidPathChars,
+  writeRecordGroup,
+} = require(path.join(ROOT_DIR, "utils", "record-output.cjs"));
 
 async function main() {
   const consoleIndex = await loadConsoleIndex();
@@ -61,17 +65,24 @@ async function main() {
         "Some .dat files do not have a platformUniqueId in index.json.",
         "Fill in these names before generating output:",
         ...names.map((name) => `- ${name}`),
-      ].join("\n")
+      ].join("\n"),
     );
   }
 
-  await resetOutputDir(OUTPUT_DIR);
   await fs.mkdir(CRC_DIR, { recursive: true });
-  await fs.mkdir(SIZE_DIR, { recursive: true });
-  await fs.mkdir(SERIAL_DIR, { recursive: true });
-  await writeRecordFiles(CRC_DIR, crcRecords);
-  await writeRecordFiles(SIZE_DIR, sizeRecords);
-  await writeRecordFiles(SERIAL_DIR, serialRecords);
+  await ensureRecordDirs(OUTPUT_DIR);
+  await writeRecordGroup(OUTPUT_DIR, {
+    dirName: "size",
+    sourceMap: sizeRecords,
+    aggregateFilename: "all-sizes.json",
+    sortRecords: true,
+  });
+  await writeRecordGroup(OUTPUT_DIR, {
+    dirName: "serial",
+    sourceMap: serialRecords,
+    aggregateFilename: "all-serials.json",
+    sortRecords: true,
+  });
 
   console.log(`Processed ${datFiles.length} .dat files`);
   console.log(`Generated ${crcRecords.size} files in output/crc`);
@@ -124,34 +135,16 @@ function addRecord(targetMap, key, record) {
   }
 }
 
-async function resetOutputDir(outputDir) {
-  await fs.rm(outputDir, { recursive: true, force: true });
-}
-
-function removeInvalidPathChars(name) {
-  return name.replace(/[/\\?%*:|"<>]/g, "_");
-}
-
 async function writeRecordFiles(outputDir, sourceMap) {
   for (const [key, recordMap] of sourceMap.entries()) {
-    const outputPath = path.join(outputDir, `${removeInvalidPathChars(key)}.json`);
+    const outputPath = path.join(
+      outputDir,
+      `${removeInvalidPathChars(key)}.json`,
+    );
     const records = [...recordMap.values()].sort(compareRecords);
     const json = `${JSON.stringify(records, null, 2)}\n`;
     await fs.writeFile(outputPath, json, "utf8");
   }
-}
-
-function compareRecords(left, right) {
-  return (
-    compareText(left.console, right.console) ||
-    compareText(left.name, right.name) ||
-    compareText(left.region || "", right.region || "") ||
-    compareText(left.serial || "", right.serial || "")
-  );
-}
-
-function compareText(left, right) {
-  return left.localeCompare(right);
 }
 
 function stripBom(text) {

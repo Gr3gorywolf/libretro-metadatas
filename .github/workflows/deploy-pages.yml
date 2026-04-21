@@ -1,4 +1,4 @@
-name: Deploy Next.js to GitHub Pages
+name: Build Release And Deploy Metadata
 
 on:
   push:
@@ -8,16 +8,16 @@ on:
     - cron: "0 0 1,16 * *"
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
 concurrency:
-  group: pages
+  group: metadata-release-pages
   cancel-in-progress: true
 
 jobs:
-  build:
+  build-and-release:
     runs-on: ubuntu-latest
 
     steps:
@@ -49,23 +49,40 @@ jobs:
       - name: Compile all-execs
         run: bun ./compilers/compile-all-execs.js
 
-      - name: Build launchbox gamesdb submodule
-        run: cd ./libretro-roms-scraper && bun install && bun run index.js
+      # - name: Build launchbox gamesdb submodule
+      #   run: cd ./libretro-roms-scraper && bun install && bun run index.js
 
-      - name: Compile launchbox gamesdb
-        run: bun ./compilers/compile-launchbox-gamesdb.js
+      # - name: Compile launchbox gamesdb
+      #   run: bun ./compilers/compile-launchbox-gamesdb.js
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./output
+
+      - name: Create GitHub release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: metadata-${{ github.run_number }}
+          commit: ${{ github.sha }}
+          name: "Metadata build #${{ github.run_number }}"
+          allowUpdates: true
+          makeLatest: true
+          artifactErrorsFailBuild: true
+          artifacts: >-
+            output/all-execs.json,
+            output/all-execs-raw.json,
+            output/all-serials.json,
+            output/all-sizes.json,
+            # output/libretro-index.json,
+            # output/libretro-full-database.json
 
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: build-and-release
 
     steps:
       - name: Deploy to GitHub Pages

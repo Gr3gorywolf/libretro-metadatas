@@ -13,7 +13,6 @@ const OUTPUT_PATH = path.resolve(__dirname, "../output/all-execs.json");
 const OUTPUT_RAW_PATH = path.resolve(__dirname, "../output/all-execs-raw.json");
 const EXECS_DIR = path.resolve(__dirname, "../output/execs");
 
-
 function normalizeExec(exec) {
   return exec.toLowerCase().trim();
 }
@@ -89,15 +88,6 @@ function main() {
     fs.writeFileSync(OUTPUT_RAW_PATH, JSON.stringify(resultRaw));
 
     ensureDir(EXECS_DIR);
-
-    for (const entry of result) {
-      const variants = getExecVariants(entry.exec);
-
-      for (const variant of variants) {
-        createExecFile(variant, entry);
-      }
-    }
-
     console.log(`✅ Combined entries: ${result.length}`);
     console.log(`📁 Exec files generated in: ${EXECS_DIR}`);
   } catch (err) {
