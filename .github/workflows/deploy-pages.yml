@@ -59,7 +59,7 @@ jobs:
           cp ./output/all-execs.json ./output/build/all-execs.json
           cp ./output/all-serials.json ./output/build/all-serials.json
           cp ./output/all-sizes.json ./output/build/all-sizes.json
-          zip -r ./output/build.zip ./output/
+          cd ./output/build && zip -r ../build.zip .
         #   cp ./output/libretro-full-database.json ./output/build/libretro-full-database.json
         #   cp ./output/libretro-index.json ./output/build/libretro-index.json
 
