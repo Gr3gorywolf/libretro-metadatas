@@ -59,6 +59,7 @@ jobs:
           cp ./output/all-execs.json ./output/build/all-execs.json
           cp ./output/all-serials.json ./output/build/all-serials.json
           cp ./output/all-sizes.json ./output/build/all-sizes.json
+          zip -r ./output/build.zip ./output/
         #   cp ./output/libretro-full-database.json ./output/build/libretro-full-database.json
         #   cp ./output/libretro-index.json ./output/build/libretro-index.json
 
@@ -76,7 +77,7 @@ jobs:
           make_latest: "true"
           fail_on_unmatched_files: true
           files: |
-            output/build/
+            output/build.zip
             output/all-execs.json
             output/all-execs-raw.json
             output/all-serials.json
