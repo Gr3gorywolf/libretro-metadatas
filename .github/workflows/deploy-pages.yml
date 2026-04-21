@@ -49,11 +49,18 @@ jobs:
       - name: Compile all-execs
         run: bun ./compilers/compile-all-execs.js
 
-      - name: Build launchbox gamesdb submodule
-        run: cd ./libretro-roms-scraper && bun install && bun run index.js
-
-      - name: Compile launchbox gamesdb
-        run: bun ./compilers/compile-launchbox-gamesdb.js
+      # - name: Build launchbox gamesdb submodule
+      #   run: cd ./libretro-roms-scraper && bun install && bun run index.js
+      # - name: Compile launchbox gamesdb
+      #   run: bun ./compilers/compile-launchbox-gamesdb.js
+      - name: Prepare build bundle
+        run: |
+          mkdir ./output/build
+          cp ./output/all-execs.json ./output/build-all-execs.json
+          cp ./output/all-serials.json ./output/all-serials.json
+          cp ./output/all-sizes.json ./output/all-sizes.json
+        #   cp ./output/libretro-full-database.json ./output/libretro-full-database.json
+        #   cp ./output/libretro-index.json ./output/libretro-index.json
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -69,13 +76,14 @@ jobs:
           make_latest: "true"
           fail_on_unmatched_files: true
           files: |
+            output/build/
             output/all-execs.json
             output/all-execs-raw.json
             output/all-serials.json
             output/all-sizes.json
-            output/libretro-full-database.json
-            output/libretro-index.json
-            output/libretro-gamesdb/*.json
+        #   output/libretro-full-database.json
+        #   output/libretro-index.json
+        #    output/libretro-gamesdb/*.json
 
   deploy:
     environment:
