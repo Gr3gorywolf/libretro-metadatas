@@ -61,21 +61,18 @@ jobs:
           path: ./output
 
       - name: Create GitHub release
-        uses: ncipollo/release-action@v1
+        uses: softprops/action-gh-release@v2
         with:
-          tag: metadata-${{ github.run_number }}
-          commit: ${{ github.sha }}
+          tag_name: metadata-${{ github.run_number }}
+          target_commitish: ${{ github.sha }}
           name: "Metadata build #${{ github.run_number }}"
-          allowUpdates: true
-          makeLatest: true
-          artifactErrorsFailBuild: true
-          artifacts: >-
-            output/all-execs.json,
-            output/all-execs-raw.json,
-            output/all-serials.json,
-            output/all-sizes.json,
-            # output/libretro-index.json,
-            # output/libretro-full-database.json
+          make_latest: "true"
+          fail_on_unmatched_files: true
+          files: |
+            output/all-execs.json
+            output/all-execs-raw.json
+            output/all-serials.json
+            output/all-sizes.json
 
   deploy:
     environment:
