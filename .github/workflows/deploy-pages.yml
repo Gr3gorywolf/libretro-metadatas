@@ -75,6 +75,7 @@ jobs:
             output/all-sizes.json
             output/libretro-full-database.json
             output/libretro-index.json
+            output/libretro-gamesdb/*.json
 
   deploy:
     environment:
